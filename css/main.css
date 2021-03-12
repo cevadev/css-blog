@@ -1,0 +1,51 @@
+/*quitamos el estilos por defecto que coloca el navegador*/
+body {
+  margin: 0;
+  padding: 0;
+  /*el home no tiene scroll*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+a {
+  text-decoration: none;
+  /*colocamos los links de manera horizontal*/
+  display: inline;
+  color: black;
+}
+
+header {
+  /*width que va de derecha a izquierda 100%*/
+  width: 100%;
+  height: 140px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+header .header-icons-container {
+  /*el container tiene el mismo ancho que su padre el header*/
+  width: 100%;
+  /*el padre tiene 140px y debemos dividir los 140px entre el header-icons-container y icons*/
+  height: 50px;
+  /*display grid para el posicionamiento*/
+  display: grid;
+  background-color: #47cfac;
+}
+
+/*posicionamos el div que contiene los iconos de redes sociales*/
+header .header-icons-container .icons {
+  width: 300px;
+  /*toma la altura de su padre que es 50px*/
+  height: auto;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: end;
+  margin-right: 50px;
+}
+
+header .icons span {
+  color: white;
+}
