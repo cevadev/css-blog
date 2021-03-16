@@ -5,13 +5,17 @@ body {
   font-family: "Roboto Mono", monospace;
   margin: 0;
   padding: 0;
-  /*el home no tiene scroll*/
+}
+
+.home-body{
+  /*solo el home no tiene scroll*/
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
+
 a {
   text-decoration: none;
   /*colocamos los links de manera horizontal*/
@@ -116,4 +120,51 @@ nav .profile-link a {
   font-weight: 700;
   font-size: 18px;
   line-height: 50px;
+}
+
+.blogs-main {
+    display: grid;
+}
+.blogs-news-container {
+    background-color: #e6e9ed;
+    padding: 0 50px 40px;
+}
+.blogs-main-new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+.blogs-news-img-container {
+    grid-column: 1;
+}
+
+/*Para darle dimension a la imagen*/
+.blogs-news-img-container img {
+  width: 85%;
+}
+
+.blogs-news-info-container {
+  /*el contenido se posiciona en el colum 2*/
+    grid-column: 2;
+}
+.blogs-news-info-container p {
+    margin-bottom: 35px;
+}
+
+.blogs-posts-container {
+    padding: 0 50px 40px;
+}
+.blogs-posts-container h3 {
+    border-bottom: 1px solid #cdd2da;  
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/*estilos para el boton leer mas*/
+.blogs-button:hover{
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 12px;
+    background-color: #48CFad;
+    transition: all .5s;
 }
