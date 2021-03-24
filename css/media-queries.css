@@ -1,0 +1,39 @@
+/*cuando la pantalla legue al maximo del 900 px los estilos aqui definidos se van aplicar*/
+@media (max-width: 900px) {
+    /*en la pagina de blogs, el titulo del blog post reciente y su breve descripcion pasan debajo de la imagen*/
+    .blogs-main-new {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr
+    }
+    /*contenedor de la imagen la enviamos a la fila 3*/
+    .blogs-news-img-container {
+        grid-row: 2;
+    }
+    /*el contenedor de la descrpcion del utlimo post se ubica en lafila 3*/
+    .blogs-news-info-container {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    /*re-dimensionamos la seccion de los post, que solo tenga 2 columnas*/
+    .blogs-posts-container .post-container {
+        max-width: 45%;
+    }
+    
+    /*cambiamos la estructura del grid de los proyectos*/
+    .proyects-main-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+    }
+
+    /*perfil del usuario*/
+    .profile-main-container .profile-container {
+        display: block;
+    }
+}
+
+/*cuando la pantalla llegue al maximo de 600px los posts se ubican en una sola columna*/
+@media (max-width: 600px) {
+    .blogs-posts-container .post-container {
+        max-width: 95%;
+    }
+}
